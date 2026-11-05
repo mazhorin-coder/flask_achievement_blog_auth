@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Мой блог достижений и навыков</title>
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать в мой Flask-блог!</h1>
+        <p>Здесь я делюсь своими достижениями и навыками, полученными в процессе обучения.</p>
+        <nav class="nav-menu">
+            <a href="{{ url_for('home') }}" class="nav-link">Главная (Профиль)</a> |
+            <a href="{{ url_for('notes') }}" class="nav-link">Дневник программиста</a> |
+            <a href="{{ url_for('logout') }}" class="nav-link">Выход из аккаунта</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <section class="my-profile">
+            <h2>Мой профиль</h2>
+            <img src="{{ url_for('static', filename='img/workspace.jpg') }}" alt="Рабочее пространство программиста">
+            <p>Я активно изучаю веб-разработку и создание серверных приложений с использование Flask.</p>
+            <div class="profile-info">
+                <ul>
+                    <li><strong>Навыки:</strong> Python, HTML, CSS</li>
+                    <li><strong>Фреймворки:</strong> Flask</li>
+                    <li><strong>Инструменты:</strong> Visual Studio Code, Git</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="progress-section">
+            <h2>Таблица успеваемости по дисциплине Фреймворк Flask</h2>
+            <div class="table-container">
+                <table>
+                    <!-- Строка 1: Название темы дисциплины -->
+                    <tr>
+                        {% for topic in topics %}
+                        <th>{{ topic.title }}</th>
+                        {% endfor %}
+                    </tr>
+                    <!-- Строка 2: Процент выполнения темы -->
+                    <tr>
+                        {% for topic in topics %}
+                        <td><strong>Процент выполнения темы:</strong><br>{{ topic.progress }}</td>
+                        {% endfor %}
+                    </tr>
+                    <!-- Строка 3: Процент выполнения ДЗ -->
+                    <tr>
+                        {% for topic in topics %}
+                        <td><strong>Процент выполнения ДЗ:</strong><br>{{ topic.hw }}</td>
+                        {% endfor %}
+                    </tr>
+                    <!-- Строка 4: Комментарии -->
+                    <tr>
+                        {% for topic in topics %}
+                        <td class="comment-cell"><em>{{ topic.comment if topic.comment else "Нет комментариев" }}</em></td>
+                        {% endfor %}
+                    </tr>
+                </table>
+            </div>
+        </section>
+        {% endblock %}
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Мой блог достижений и навыков. Все права защищены.</p>
+    </footer>
+    
+</body>
+</html>

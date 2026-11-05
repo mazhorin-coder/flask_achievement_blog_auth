@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Авторизация — Flask-блог</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Мой блог достижений и навыков</h1>
+    </header>
+    <main>
+        <section class="guest-container">
+            <h2>Добро пожаловать!</h2>
+            <p>Для просмотра таблицы успеваемости и ведения дневника, пожалуйста, войдите в систему или зарегистрируйтесь.</p>
+            <div>
+                <a href="{{ url_for('login') }}" class="btn-submit">Войти</a> 
+                <a href="{{ url_for('register') }}" class="btn-submit">Регистрация</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

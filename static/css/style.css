@@ -1,0 +1,251 @@
+body {
+    box-sizing: border-box;
+    background-color: #1e1e2f;
+    color: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #3b3b58, #252538);
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 3px solid #6c5ce7;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #a29bfe;
+}
+
+main {
+    max-width: 1200px;
+    width: 90%;
+    margin: 30px auto;
+}
+
+section {
+    background-color: #2d2d44;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+h2 {
+    color: #fd79a8;
+    border-bottom: 2px solid #3b3b58;
+    padding-bottom: 10px;
+}
+
+.my-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.my-profile img {
+    max-width: 100%;
+    height: auto;
+    width: 350px;
+    border-radius: 8px;
+    margin: 15px 0;
+    border: 2px solid #6c5ce7;
+}
+
+.profile-info {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.my-profile ul {
+    text-align: left;
+    padding-left: 40px;
+    margin: 20px 0 0 0;
+}
+
+.my-profile li {
+    margin-bottom: 8px;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1000px;
+    background-color: #232338;
+}
+
+th, td {
+    border: 1px solid #444466;
+    padding: 12px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+th {
+    background-color: #6c5ce7;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #2a2a40;
+}
+
+.comment-cell {
+    color: #b2bec3;
+    font-size: 0.85rem;
+}
+
+footer {
+    margin-top: auto;
+    padding: 20px;
+    text-align: center;
+    color: #74b9ff;
+    width: 100%;
+}
+
+.nav-menu {
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+.nav-link {
+    color: #74b9ff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #fd79a8;
+}
+
+.note-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.form-group label {
+    margin-bottom: 5px;
+    color: #a29bfe;
+    font-weight: 600;
+    text-align: left;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #444466;
+    background-color: #1e1e2f;
+    color: #f5f5f5;
+    font-family: inherit;
+    display: block;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.btn-submit {
+    background-color: #6c5ce7;
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #5b4cc4;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: #444466;
+    margin: 30px 0;
+}
+
+.notes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.note-card {
+    background-color: #232338;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #fd79a8;
+}
+
+.note-card h4 {
+    margin: 0 0 10px 0;
+    color: #fd79a8;
+}
+
+.note-card h5 {
+    margin: 0 0 10px 0;
+    color: #a29bfe;
+    font-size: 1rem;
+}
+
+.note-card p {
+    margin: 0;
+    color: #b2bec3;
+}
+
+.guest-container {
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 50px;
+}
+
+.guest-container p {
+    color: #b2bec3;
+    margin-bottom: 30px;
+}
+
+.form-message-list {
+    color: #fd79a8;
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 15px;
+}
